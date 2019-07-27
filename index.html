@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css">-->
+    <!--<script src="main.js"></script>-->
+  </head>
+  <body>
     <button id="getText">Get Text</button>
+    <div id="output"></div>
 
     <script>
-    document.getElementById('getText').addEventListener('click',getText)
+      document.getElementById("getText").addEventListener("click", getText);
 
-    function getText() {
-        console.log(123)
-    }
+      function getText() {
+        /* fetch("sample.txt")
+          .then(function(res) {
+            return res.text(); //if we had just logged the res at this point we would have gotten some extra details from the res that we don't really need
+          })
+          .then(function(data) {
+            console.log(data);
+          });*/
+
+        //now let's do the same thing but this time we will use arrow functions
+        fetch("sample.txt")
+          .then(res => res.text())
+          .then(data => {
+            console.log(data);
+            document.getElementById("output").innerHTML = data;
+          })
+          .catch(err => console.log(err));
+      }
     </script>
-</body>
+  </body>
 </html>

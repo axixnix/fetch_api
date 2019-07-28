@@ -9,6 +9,7 @@
     <!--<script src="main.js"></script>-->
   </head>
   <body>
+    <!--fetch-->
     <button id="getText">Get Text</button>
     <div id="output"></div>
 
@@ -31,7 +32,7 @@
             console.log(data);
             document.getElementById("output").innerHTML = data;
           })
-          .catch(err => console.log(err));
+          .catch(err => console.log(err)); //i don't think this catch is actually working, should find out why later
       }
     </script>
   </body>

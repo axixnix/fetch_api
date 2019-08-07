@@ -19,6 +19,7 @@
       <div>
         <input type="text" id="title" placeholder="Title" />
       </div>
+      <div></div>
     </form>
 
     <script>
@@ -36,6 +37,7 @@
           });*/
 
         //now let's do the same thing but this time we will use arrow functions
+
         fetch("sample.txt")
           .then(res => res.text())
           .then(data => {

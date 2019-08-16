@@ -97,7 +97,8 @@
           headers: {
             Accept: "application/json,text/plain,*/*",
             "Content-type": "application/json"
-          }
+          },
+          body:json.stringify({title:title,body:body})
         });
       }
     </script>

@@ -98,8 +98,8 @@
             Accept: "application/json,text/plain,*/*",
             "Content-type": "application/json"
           },
-          body:json.stringify({title:title,body:body})
-        });
+          body: json.stringify({ title: title, body: body })
+        }).then(res => res.json());
       }
     </script>
   </body>

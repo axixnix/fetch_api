@@ -7,26 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css">-->
     <!--<script src="main.js"></script>-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  
-
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!--fetch-->
-    <button id="getText">Get Text</button>
-    <button id="getUsers">Get Users</button>
-    <button id="getPosts">Get API Data</button>
-    <hr />
-    <div id="output"></div>
-    <form action="" id="addPost">
-      <div>
-        <input type="text" id="title" placeholder="Title" />
-      </div>
-      <div>
-        <textarea id="body" placeholder="body"></textarea>
-      </div>
-      <input type="submit" value="submit" id="" />
-    </form>
+    <div class="container">
+      <button id="getText">Get Text</button>
+      <button id="getUsers">Get Users</button>
+      <button id="getPosts">Get API Data</button>
+      <hr />
+      <div id="output"></div>
+      <form action="" id="addPost">
+        <div>
+          <input type="text" id="title" placeholder="Title" />
+        </div>
+        <div>
+          <textarea id="body" placeholder="body"></textarea>
+        </div>
+        <input type="submit" value="submit" id="" />
+      </form>
+    </div>
 
     <script>
       document.getElementById("getText").addEventListener("click", getText);
